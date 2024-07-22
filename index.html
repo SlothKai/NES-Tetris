@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NES Tetris</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P"/>
   </head>
   <!-- Maybe text shoukd be p or span -->
   <body>
@@ -17,7 +18,7 @@
       </div>
       <div class = "middle">
         <div class = "completed-lines">Lines</div>
-        <div class = "game-board">Game</div>
+        <canvas class = "game-board" id ="game-board"></canvas>
       </div>
       <div class = "right">
         <div class = "score-container">
@@ -32,6 +33,11 @@
             <div class = "level-text">Level</div>
             <div class = "level">Level Value</div>
         </div>
+        <button id = "play" class = "play" onclick="play()">Play</button>
       </div>
+    <script type="text/javascript" src="/constant.js"></script>
+    <script type="text/javascript" src="/board.js"></script>
+    <script type="text/javascript" src="/piece.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
   </body>
 </html>

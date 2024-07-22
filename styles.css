@@ -1,6 +1,12 @@
 :root {
   --borderline: solid 2px red;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+}
 body,
 .container > *,
 .left > *,
@@ -16,14 +22,14 @@ body,
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .container {
-  display: flex;
-  flex-direction: right;
-  align-items: stretch;
-  margin: 0 auto;
+  display: grid;
+  width: 75vw;
+  height: 100vh;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .left,
 .middle,
@@ -32,4 +38,35 @@ body {
   flex-direction: column;
   /* align-items: center; */
   justify-content: center;
+  height: inherit;
+}
+
+.right {
+  position: relative;
+}
+
+.score-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.next-piece-container {
+  text-align: center;
+}
+
+.level-container {
+  text-align: center;
+}
+
+.play {
+  background-color: #4caf50;
+  font-size: 16px;
+  padding: 15px 30px;
+  cursor: pointer;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
 }
